@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">price</th>
+            <th scope="col">thumbnail</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <!-- if no datos -->
+        <% if (products.length === 0) { %>
+            <tr>
+                <td colspan="3">No hay datos</td>
+            </tr>
+        <% }else{ %>
+        
+        <% for (let i = 0; i < products.length; i++) { %>
+            <tr>
+                <td><%=products[i].id%></td>
+                <td><%=products[i].title%></td>
+                <td><%=products[i].price%></td>
+                <td><img src=<%=products[i].thumbnail%> alt=""></td>
+            </tr>
+        <% } } %>
+    </tbody>

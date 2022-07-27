@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>formularios</title>
+        
+    </head>
+    <body>
+         <form id="miFormulario" onsubmit="return myfun(this)">
+             title: <input type="text" id="title" name="title" /><br/>
+             price: <input type="text" id="price" name="price" /><br/>
+             thumbnail: <input type="text" id="thumbnail" name="thumbnail" /><br/>
+             <input type="submit" id="btnEnviar"  value="Enviar el formulario" />
+         </form>
+         <button onclick="location.href='http://localhost:8080/api/productos';" >ver productos</button>
+         <script src="index.js"></script>
+    </body>
+</html> 

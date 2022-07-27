@@ -1,0 +1,27 @@
+html 
+    head
+        title='productos'
+    body
+        table
+            thead 
+                tr 
+                    td Prodcuctos
+
+                tr
+                    td id
+                    td title
+                    td price
+                    td thumbnail
+
+            tbody 
+                each n in products
+                    tr
+                        td= n.id
+                        td= n.title
+                        td= n.price
+                        td
+                            img(src=n.thumbnail alt='login' style='width:100px; height:100px;')
+                
+                unless products.length
+                     tr
+                        td= 'No hay productos'

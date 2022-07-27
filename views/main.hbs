@@ -1,0 +1,32 @@
+
+<table>
+  <thead>
+    <tr>
+      <td rowspan="1">Products</td>
+    </tr>
+    <tr>
+      {{#each columnKeys as |columnKey|}}
+        <th>{{columnKey}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+
+   <tbody>
+    {{#each products as |product|}}
+      <tr>
+       
+        <td>{{title}}</td>
+        <td>{{price}}</td>
+        <td><img src="{{thumbnail}}" alt="Girl in a jacket" width="50" height="50"></td>
+        <td>{{id}}</td>
+        
+      </tr>
+    {{/each}}
+    {{#unless products}}
+     <tr>
+        <td>No hay productos</td>
+      </tr>
+    {{/unless}}
+  </tbody>
+  
+</table>
